@@ -39,6 +39,9 @@ public class HSConf {
 			if (e.hasAttribute("encrypted") && e.getAttribute("encrypted").toLowerCase().equals("true")) {
 				keys.put(e.getTagName(), e.getTextContent());
 			}
+			if (e.hasAttribute("encryptedConfiguration") && e.getAttribute("encryptedConfiguration").toLowerCase().equals("true")) {
+				keys.put(e.getTagName(), e.getTextContent());
+			}
 			readEncryptedKeys(e);
 		}
 
